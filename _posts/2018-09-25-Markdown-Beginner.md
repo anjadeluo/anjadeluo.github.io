@@ -3,7 +3,7 @@ layout:     post
 title:      Markdown Beginner
 subtitle:   
 date:       2018-09-25
-author:     Xin YAO
+author:     Luo Anyu
 catalog: true
 tags:
     - Markdown
@@ -117,7 +117,7 @@ Github Pages - (If you have one)
 
 ## 本身就是链接
     <url>
-<https://xinyao1994.github.io/>
+<https://anjadeluo.github.io/>
 
 ## 分割线
     ***
