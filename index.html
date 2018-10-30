@@ -144,17 +144,40 @@ layout: default
                 </div>
             </div>
 
-            <!-- <div class="side">
+             <div class="side">
                 <div>
-                    <i class="fa fa-external-link"></i>
-                    Links
+                    <table>
+                        <thead>
+                        <tr>
+                            <td>用户名</td>
+                            <td>密码</td>
+                            <td>邮箱</td>
+                            <td>电话</td>
+                            <td>创建时间</td>
+                        </tr>
+                        </thead>
+                        <tbody id="userTbody"></tbody>
+                    </table>
                 </div>
-                <ul  class="content-ul">
-
-                </ul>
-            </div> -->
+            </div>
         </div>
     </div>
 </div>
 <!-- <script src="{{ "/js/scroll.min.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
 <!-- <script src="{{ "/js/pageContent.js " | prepend: site.baseurl }}" charset="utf-8"></script> -->
+<script src="http://code.jquery.com/jquery-1.4.1.min.js"></script>
+<script>
+    $.ajax({
+        url:"http://javacloud.bmob.cn/5dc4eb7322f847eb/testdb",
+        type: "GET",
+        dataType: "json",
+        success: function (data) {
+            var headHtml = "<>"
+            var results = data.results;
+            for (var i=0; i<results.length; i++) {
+                var user = results[i];
+
+            }
+        }
+    });
+</script>
