@@ -174,7 +174,8 @@ layout: default
         jsonp:'callback',
         jsonpCallback:"successCallback",
         success:function(result) {
-            result = JSON.stringify(result);
+//            result = JSON.stringify(result);
+            result = eval("("+result+")");
             console.info("请求成功");
             var html = "";
             var data = result.results;
