@@ -168,13 +168,14 @@ layout: default
 <script>
     $.ajax({
         url: "https://javacloud.bmob.cn/5dc4eb7322f847eb/testdb",
-        type: "GET",
+        type: "post",
         header:{"X-Bmob-Application-Id": "f15aed430856ab95e8f5c95e36aa8efb",
                 "X-Bmob-REST-API-Key": "decee84df03ffa14f73d1231bd060cf7",
                 "Content-Type": "application/json"},
         dataType: "json",
         data:{"name": "tom"},
         success: function (data) {
+            console.info("请求成功");
             var html = "";
             var results = data.results;
             for (var i=0; i<results.length; i++) {
@@ -188,8 +189,8 @@ layout: default
             }
             $("#userTbody").append(html);
         }, error: function(data){
+            console.info("请求失败");
             console.info(data);
-            alert("请求失败");
         }
     });
 </script>
