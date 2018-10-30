@@ -167,7 +167,7 @@ layout: default
 <script src="{{ "/js/jquery.min.js " | prepend: site.baseurl }}" charset="utf-8"></script>
 <script>
     $.ajax({
-        url:"http://javacloud.bmob.cn/5dc4eb7322f847eb/testdb",
+        url: "http://javacloud.bmob.cn/5dc4eb7322f847eb/testdb",
         type: "GET",
         dataType: "json",
         success: function (data) {
@@ -183,6 +183,9 @@ layout: default
                      +  "</tr>"
             }
             $("#userTbody").append(html);
+        }, error: function(data){
+            console.info(data);
+            alert("请求失败");
         }
     });
 </script>
