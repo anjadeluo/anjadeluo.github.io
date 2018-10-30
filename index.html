@@ -150,7 +150,6 @@ layout: default
                         <thead>
                         <tr>
                             <td>用户名</td>
-                            <td>密码</td>
                             <td>邮箱</td>
                             <td>电话</td>
                             <td>创建时间</td>
@@ -172,12 +171,18 @@ layout: default
         type: "GET",
         dataType: "json",
         success: function (data) {
-            var headHtml = "<>"
+            var html = "";
             var results = data.results;
             for (var i=0; i<results.length; i++) {
                 var user = results[i];
-
+                html += "<tr>"
+                     +  "   <td>" + user.username + "</td>"
+                     +  "   <td>" + user.email + "</td>"
+                     +  "   <td>" + user.mobilePhoneNumber + "</td>"
+                     +  "   <td>" + user.createdAt + "</td>"
+                     +  "</tr>"
             }
+            $("#userTbody").append(html);
         }
     });
 </script>
