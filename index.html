@@ -176,8 +176,9 @@ layout: default
         data:{"name": "tom"},
         dataType:'jsonp',
         jsonp:'callback',
-        jsonpCallback:"successCallback",
+//        jsonpCallback:"successCallback",
         success: function (data) {
+            data = JSON.stringify(data)
             console.info("请求成功");
             var html = "";
             var results = data.results;
